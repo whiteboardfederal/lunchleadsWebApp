@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EmployeeService } from './employee.service';
+import { EmployeeService } from './employees/employee.service';
 
 describe('EmployeeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
