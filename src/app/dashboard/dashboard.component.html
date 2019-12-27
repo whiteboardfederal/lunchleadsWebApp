@@ -1,0 +1,27 @@
+<mat-card style="background-color: #cfd8dc; margin: 2%;">
+  <mat-card-header>
+    <mat-card-title>Employees</mat-card-title>
+    <mat-card-subtitle>Whiteboard Federal employees</mat-card-subtitle>
+  </mat-card-header>
+  <mat-grid-list cols="3" rowHeight="100px" style="margin: 2%;">
+    <mat-grid-tile *ngFor="let tile of employeeTiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+      <mat-card style="margin: 3%; background-color: #eceff1; cursor: pointer; width: 100%;" routerLink="/employees">
+        {{tile.text}}
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+
+<mat-card style="background-color: #cfd8dc; margin: 2%;">
+  <mat-card-header>
+    <mat-card-title>Lunch Leads</mat-card-title>
+    <mat-card-subtitle>Whiteboard Federal Lunch Leads</mat-card-subtitle>
+  </mat-card-header>
+  <mat-grid-list cols="3" rowHeight="100px" style="margin: 2%;">
+    <mat-grid-tile *ngFor="let tile of lunchLeadTiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+      <mat-card style="margin: 3%; background-color: #eceff1; cursor: pointer; width: 100%;" routerLink="/lunch-leads">
+        {{tile.text}}
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

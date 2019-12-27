@@ -1,15 +1,25 @@
-
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>
       <button mat-button style="font-size: larger;" routerLink="/">Lunch Leads App</button>
     </span>
     <span class="example-spacer"></span>
-    <span>
+    <span class="example-icon">
       <button mat-button routerLink="/employees">Employees</button>
     </span>
+    <span class="example-icon">
+      <button mat-button routerLink="/lunch-leads">Lunch Leads</button>
+    </span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/settings">
+        <mat-icon>person</mat-icon>
+        <span>User Settings</span>
+      </button>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
-
 
 <router-outlet></router-outlet>
